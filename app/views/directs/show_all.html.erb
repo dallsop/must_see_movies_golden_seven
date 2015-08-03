@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Directors</title>
+</head>
+
+<body>
+<h1>Directors</h1>
+
+<p></p>
+<% @all_directors.each do |d| %>
+    <b><%= d.name %></b> (born <%= d.dob %>)
+    <p>
+      <a href="/directors/<%= d.id %>">
+        View
+      </a>
+      &NonBreakingSpace;
+      <a href="/directors/<%= d.id %>/edit_form">
+        Update
+      </a>
+      &NonBreakingSpace;
+      <a href="/delete_director/<%= d.id %>">
+        Delete
+      </a>
+    </p>
+
+    <p><img src=<%= d.image_url %> width="200px"></p>
+
+<% end %>
+
+</body>
+
+</html>

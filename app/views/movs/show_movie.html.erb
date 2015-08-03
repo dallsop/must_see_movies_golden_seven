@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= @movie_row.title %></title>
+</head>
+
+<body>
+<h1><%= @movie_row.title %></h1>
+
+<p><%= @movie_row.year %>: <%= @movie_row.duration %> minutes</p>
+
+<p>
+  <a href="/movies/<%= @movie_row.id %>">
+    View
+  </a>
+  &NonBreakingSpace;
+  <a href="/movies/<%= @movie_row.id %>/edit_form">
+    Update
+  </a>
+  &NonBreakingSpace;
+  <a href="/delete_movie/<%= @movie_row.id %>">
+    Delete
+  </a>
+</p>
+
+<p><img src=<%= @movie_row.image_url %> width="200px"></p>
+
+<p><%= @movie_row.description %></p>
+
+</body>
+
+</html>

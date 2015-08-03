@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= @director_row.name %></title>
+</head>
+
+<body>
+<h1><%= @director_row.name %></h1>
+
+<p></p>
+Born <%= @director_row.dob %>
+
+<p>
+  <a href="/directors/<%= @director_row.id %>">
+    View
+  </a>
+  &NonBreakingSpace;
+  <a href="/directors/<%= @director_row.id %>/edit_form">
+    Update
+  </a>
+  &NonBreakingSpace;
+  <a href="/delete_director/<%= @director_row.id %>">
+    Delete
+  </a>
+</p>
+
+<p><img src=<%= @director_row.image_url %> width="200px"></p>
+
+<p><%= @director_row.bio %></p>
+
+</body>
+
+</html>

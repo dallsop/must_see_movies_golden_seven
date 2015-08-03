@@ -1,56 +1,55 @@
 Rails.application.routes.draw do
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  ### DIRECTORS ###
 
-  # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #create
+  get('/directors/new_form', {:controller => 'directs', :action => 'new_form'})
+  get('/directors/add_director', {:controller => 'directs', :action => 'add_director'})
 
-  # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  # read
+  get('/directors', {:controller => 'directs', :action => 'show_all'})
+  get('/directors/:id', {:controller => 'directs', :action => 'show_director'})
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  # update
+  get('/directors/:id/edit_form', {:controller => 'directs', :action => 'edit_form'})
+  get('/directors/:id/edit_director', {:controller => 'directs', :action => 'edit_director'})
 
-  # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  # delete
+  get('/delete_director/:id', {:controller => 'directs', :action => 'delete_director'})
 
-  # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
 
-  # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', on: :collection
-  #     end
-  #   end
+  ### ACTORS ###
 
-  # Example resource route with concerns:
-  #   concern :toggleable do
-  #     post 'toggle'
-  #   end
-  #   resources :posts, concerns: :toggleable
-  #   resources :photos, concerns: :toggleable
+  #create
+  get('/actors/new_form', {:controller => 'acts', :action => 'new_form'})
+  get('/actors/add_actor', {:controller => 'acts', :action => 'add_actor'})
 
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  # read
+  get('/actors', {:controller => 'acts', :action => 'show_all'})
+  get('/actors/:id', {:controller => 'acts', :action => 'show_actor'})
+
+  # update
+  get('/actors/:id/edit_form', {:controller => 'acts', :action => 'edit_form'})
+  get('/actors/:id/edit_actor', {:controller => 'acts', :action => 'edit_actor'})
+
+  # delete
+  get('/delete_actor/:id', {:controller => 'acts', :action => 'delete_actor'})
+
+
+  ### MOVIES ###
+
+  #create
+  get('/movies/new_form', {:controller => 'movs', :action => 'new_form'})
+  get('/movies/add_movie', {:controller => 'movs', :action => 'add_movie'})
+
+  # read
+  get('/movies', {:controller => 'movs', :action => 'show_all'})
+  get('/movies/:id', {:controller => 'movs', :action => 'show_movie'})
+
+  # update
+  get('/movies/:id/edit_form', {:controller => 'movs', :action => 'edit_form'})
+  get('/movies/:id/edit_movie', {:controller => 'movs', :action => 'edit_movie'})
+
+  # delete
+  get('/delete_movie/:id', {:controller => 'movs', :action => 'delete_movie'})
 end

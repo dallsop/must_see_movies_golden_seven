@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update <%= @actor_to_update.name %></title>
+</head>
+
+<body>
+<h1>Update <%= @actor_to_update.name %></h1>
+
+<form action="http://localhost:3000/actors/<%= @actor_to_update.id %>/edit_actor">
+  <div>
+    <label for="actor_name">Name:</label>
+    <input id="actor_name" type="text" name="name" size="<%= @actor_to_update.name.length %>" value="<%= @actor_to_update.name %>">
+  </div>
+  <div>
+    <label for="date_of_birth">Date of Birth:</label>
+    <input id="date_of_birth" type="text" name="birthday" size="<%= @actor_to_update.dob.length %>" value="<%= @actor_to_update.dob %>">
+  </div>
+  <div>
+    <label for="picture_url">Picture URL:</label>
+    <input id="picture_url" type="text" name="picture" size="<%= @actor_to_update.image_url.length %>" value="<%= @actor_to_update.image_url %>">
+  </div>
+  <div>
+    <label for="bio">Brief Biography:</label>
+    <textarea id="bio" name="biography" rows="10" cols="150"><%= @actor_to_update.bio %></textarea>
+  </div>
+  <div>
+    <button>Update</button>
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Movie</title>
+</head>
+
+<body>
+
+<h1>Add New Movie</h1>
+
+<form action="http://localhost:3000/add_movie">
+  <div>
+    <label for="movie_title">Title:</label>
+    <input id="movie_title" type="text" name="title">
+  </div>
+  <div>
+    <label for="year">Year:</label>
+    <input id="year" type="number" name="year">
+  </div>
+  <div>
+    <label for="duration">Movie Length (Minutes):</label>
+    <input id="duration" type="number" name="duration">
+  </div>
+  <div>
+    <label for="picture_url">Picture URL:</label>
+    <input id="picture_url" type="text" name="picture">
+  </div>
+  <div>
+    <label for="description">Brief Description:</label>
+    <textarea id="description" name="description" rows="10" cols="150"><%= @movie_to_update.description %></textarea>
+  </div>
+  <div>
+    <button>Add</button>
+  </div>
+</form>
+
+
+
+
+
+</body>
+
+</html>
