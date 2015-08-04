@@ -9,7 +9,7 @@
 
 <h1>Add New Movie</h1>
 
-<form action="http://localhost:3000/add_movie">
+<form action="http://localhost:3000/movies/add_movie">
   <div>
     <label for="movie_title">Title:</label>
     <input id="movie_title" type="text" name="title">
@@ -28,7 +28,7 @@
   </div>
   <div>
     <label for="description">Brief Description:</label>
-    <textarea id="description" name="description" rows="10" cols="150"><%= @movie_to_update.description %></textarea>
+    <textarea id="description" name="description" rows="10" cols="150"></textarea>
   </div>
   <div>
     <button>Add</button>

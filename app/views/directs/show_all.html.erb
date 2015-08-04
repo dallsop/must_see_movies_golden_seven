@@ -8,6 +8,8 @@
 <body>
 <h1>Directors</h1>
 
+<a href="/directors/new_form">Add New Director</a>
+
 <p></p>
 <% @all_directors.each do |d| %>
     <b><%= d.name %></b> (born <%= d.dob %>)

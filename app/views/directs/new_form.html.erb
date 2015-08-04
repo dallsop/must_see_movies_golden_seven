@@ -9,7 +9,7 @@
 
 <h1>Add New Director</h1>
 
-<form action="http://localhost:3000/add_director">
+<form action="http://localhost:3000/directors/add_director">
   <div>
     <label for="director_name">Name:</label>
     <input id="director_name" type="text" name="name">
@@ -24,7 +24,7 @@
   </div>
   <div>
     <label for="director_bio">Brief Biography:</label>
-    <input id="director_bio" type="text" name="biography">
+    <textarea id="director_bio" name="director_bio" rows="10" cols="150"></textarea>
   </div>
   <div>
     <button>Add</button>

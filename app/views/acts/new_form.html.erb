@@ -9,7 +9,7 @@
 
 <h1>Add New Actor</h1>
 
-<form action="http://localhost:3000/add_actor">
+<form action="http://localhost:3000/actors/add_actor">
   <div>
     <label for="actor_name">Name:</label>
     <input id="actor_name" type="text" name="name">
@@ -24,7 +24,7 @@
   </div>
   <div>
     <label for="actor_bio">Brief Biography:</label>
-    <input id="actor_bio" type="text" name="biography">
+    <textarea id="actor_bio" name="actor_bio" rows="10" cols="150"></textarea>
   </div>
   <div>
     <button>Add</button>
